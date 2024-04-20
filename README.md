@@ -1,5 +1,11 @@
 Requires installation of the latest Java Runtim Environment (JRE), downloadable from Oracle: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 
+Google Static Maps API key is not included. (/src/model/util/EarthquakeCommand.java)
+apiKeyGSM = "#################"; (Fill in your API key here before compiling)
+
+
+21/04/2024 - Plans to add a way to add your own API key into the program. Compile instructions will soon be provided.
+
 OS Support: Windows 64 Bit
 OSX: The program runs in OSX
 Linux: Not yet tested, theoretically should work
