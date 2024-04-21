@@ -1,18 +1,23 @@
-Requires installation of the latest Java Runtim Environment (JRE), downloadable from Oracle: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
+Requires installation of the Java Runtim Environment (JRE) version 21, downloadable: https://adoptium.net/en-GB/temurin/archive/?version=21
+
+Alternatively, you can use the JDK from this same download page. If you do this you don't need the JRE due to the JDK contatining a version of the JRE.
 
 Google Static Maps API key is not included. (/src/model/util/EarthquakeCommand.java)
 apiKeyGSM = "#################"; (Fill in your API key here before compiling)
+You need to generate your own API key to use with the application. See the Google help page here:
+https://support.google.com/googleapi/answer/6158862?hl=en
 
+21/04/2024 - Plans to add a way to add your own API key into the program.
 
-21/04/2024 - Plans to add a way to add your own API key into the program. Compile instructions will soon be provided.
-
-To compile naviagte to root project folder and run: 
+To compile navigate to root project folder and run: 
 javac -cp "reources/;resources/\*" src/controller/* src/view/components/* src/model/util/* src/model/facade/*  src/view/main/*.java -Xlint:deprecation --module-path javafx-sdk-22.0.1/lib --add-modules javafx.web,javafx.media,javafx.swing -d .\bin
 
-Then use your editor/compiler to export a runnabele JAR file from the project
+Then use your editor/compiler to export a runnable JAR file from the project
 
-Just running the JAR file will not work, you also have to add the modules to the JAR on running it:
-java -jar --module-path javafx-sdk-22.0.1/lib --add-modules javafx.web,javafx.media,javafx.swing --enable-preview EarthquakeInformation.jar
+The app needs the "resources" folder in the root directory to ouput the API json response, so make sure this is there when you run the JAR
+
+To run navigate to root project folder and run (exchange jar/EarthquakeInformation.jar for the location of your jar file):
+java -jar --module-path javafx-sdk-22.0.1/lib --add-modules javafx.web,javafx.media,javafx.swing --enable-preview jar/EarthquakeInformation.jar
 
 OS Support: Windows 64 Bit
 OSX: The program runs in OSX

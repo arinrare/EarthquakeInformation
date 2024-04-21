@@ -33,14 +33,14 @@ public class IconBar extends JPanel {
     	this.setLayout(new FlowLayout());
     	try {
     		
-    		InputStream input1 = this.getClass().getClassLoader().getResourceAsStream("searchIcon.png");
-    		InputStream input2 = this.getClass().getClassLoader().getResourceAsStream("citiesIcon.png");
-    		InputStream input3 = this.getClass().getClassLoader().getResourceAsStream("searchIconGreyed.png");
-    		InputStream input4 = this.getClass().getClassLoader().getResourceAsStream("citiesIconGreyed.png");
-    		InputStream input5 = this.getClass().getClassLoader().getResourceAsStream("citySearchIcon.png");
-    		InputStream input6 = this.getClass().getClassLoader().getResourceAsStream("citySearchIconGreyed.png");
-    		InputStream input7 = this.getClass().getClassLoader().getResourceAsStream("mapIcon.png");
-    		InputStream input8 = this.getClass().getClassLoader().getResourceAsStream("mapIconGreyed.png");
+    		InputStream input1 = this.getClass().getClassLoader().getResourceAsStream("images/searchIcon.png");
+    		InputStream input2 = this.getClass().getClassLoader().getResourceAsStream("images/citiesIcon.png");
+    		InputStream input3 = this.getClass().getClassLoader().getResourceAsStream("images/searchIconGreyed.png");
+    		InputStream input4 = this.getClass().getClassLoader().getResourceAsStream("images/citiesIconGreyed.png");
+    		InputStream input5 = this.getClass().getClassLoader().getResourceAsStream("images/citySearchIcon.png");
+    		InputStream input6 = this.getClass().getClassLoader().getResourceAsStream("images/citySearchIconGreyed.png");
+    		InputStream input7 = this.getClass().getClassLoader().getResourceAsStream("images/mapIcon.png");
+    		InputStream input8 = this.getClass().getClassLoader().getResourceAsStream("images/mapIconGreyed.png");
     		
     		Image searchIcon = ImageIO.read(input1);
     		Image citiesIcon = ImageIO.read(input2);

@@ -86,10 +86,10 @@ public class BrowserPanel extends JPanel {
 		
 		try {
 			
-			InputStream input1 = this.getClass().getClassLoader().getResourceAsStream("zoomIn.png");
-			InputStream input2 = this.getClass().getClassLoader().getResourceAsStream("zoomOut.png");
-			InputStream input3 = this.getClass().getClassLoader().getResourceAsStream("zoomInGreyed.png");
-			InputStream input4 = this.getClass().getClassLoader().getResourceAsStream("zoomOutGreyed.png");
+			InputStream input1 = this.getClass().getClassLoader().getResourceAsStream("images/zoomIn.png");
+			InputStream input2 = this.getClass().getClassLoader().getResourceAsStream("images/zoomOut.png");
+			InputStream input3 = this.getClass().getClassLoader().getResourceAsStream("images/zoomInGreyed.png");
+			InputStream input4 = this.getClass().getClassLoader().getResourceAsStream("images/zoomOutGreyed.png");
 			Image zoomInIcon = ImageIO.read(input1);
 			Image zoomOutIcon = ImageIO.read(input2);
 			Image zoomInIconGreyed = ImageIO.read(input3);
@@ -159,6 +159,7 @@ public class BrowserPanel extends JPanel {
 		}
 		catch (Exception e) {
 	    	System.out.println("Error opening image file");
+			System.out.println(e.getMessage());
 	    }
 		
 		initAndShowGUI();
