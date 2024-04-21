@@ -14,11 +14,13 @@ public class EIDriver {
 	public EIDriver() {
 		mainFrame = new MainFrame(model);
 		mainFrame.setVisible(true); 
+
 	}
 	
 	public static void main(String[] args) {
 		
 		model = new EIFacade();
+		System.out.println("Welcome to the Earthquake Insight Application");
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				/* Changes for Mac OSX */
@@ -26,6 +28,7 @@ public class EIDriver {
 				// Properties props = System.getProperties();
 				// props.put("prism.order", "sw");
 				// EIDriver eiInstance = new EIDriver();
+				new EIDriver();
 			}
 		});
 	}

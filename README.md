@@ -6,6 +6,14 @@ apiKeyGSM = "#################"; (Fill in your API key here before compiling)
 
 21/04/2024 - Plans to add a way to add your own API key into the program. Compile instructions will soon be provided.
 
+To compile naviagte to root project folder and run: 
+javac -cp "reources/;resources/\*" src/controller/* src/view/components/* src/model/util/* src/model/facade/*  src/view/main/*.java -Xlint:deprecation --module-path javafx-sdk-22.0.1/lib --add-modules javafx.web,javafx.media,javafx.swing -d .\bin
+
+Then use your editor/compiler to export a runnabele JAR file from the project
+
+Just running the JAR file will not work, you also have to add the modules to the JAR on running it:
+java -jar --module-path javafx-sdk-22.0.1/lib --add-modules javafx.web,javafx.media,javafx.swing --enable-preview EarthquakeInformation.jar
+
 OS Support: Windows 64 Bit
 OSX: The program runs in OSX
 Linux: Not yet tested, theoretically should work

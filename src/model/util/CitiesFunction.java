@@ -32,6 +32,7 @@ public class CitiesFunction {
 	public void checkOnlineStatus() {
 		
 			try {
+				@SuppressWarnings("deprecation")
 				URL URLTest = new URL(String.format("http://api.geonames.org/earthquakesJSON?username=%s&north=0.1&south=0.1&east=0.1&west=0.1", "michaelbaggottrmit"));
 				HttpURLConnection requestTest = (HttpURLConnection) URLTest.openConnection();
 				requestTest.connect();
@@ -49,7 +50,8 @@ public class CitiesFunction {
 	
 	public void connect() {
 		try {
-			url = new URL(String.format("http://api.geonames.org/searchJSON?username=%s&north=%s&south=%s&east=%s&west=%s&name=%s&country=%s&continetCode=%s&maxRows=%s", cc.getAPIKey(), cc.getNorthBoundary(), cc.getSouthBoundary(), cc.getEastBoundary(), cc.getWestBoundary(), cc.getName(), cc.getCountry(), cc.getContinent(), cc.getNumResults())); 
+			@SuppressWarnings("deprecation")
+			URL url = new URL(String.format("http://api.geonames.org/searchJSON?username=%s&north=%s&south=%s&east=%s&west=%s&name=%s&country=%s&continetCode=%s&maxRows=%s", cc.getAPIKey(), cc.getNorthBoundary(), cc.getSouthBoundary(), cc.getEastBoundary(), cc.getWestBoundary(), cc.getName(), cc.getCountry(), cc.getContinent(), cc.getNumResults())); 
 			System.out.println(url);
 			request = (HttpURLConnection) url.openConnection();
 			request.connect();	
