@@ -43,8 +43,3 @@ TODO:
 -Package program into an installer that will include automatic installation of the JRE (So the user does not have to do this themselves)
 -Investigate other uses of data that the user may like to have implemented, such as graphing of quakes, or other analytics
 -Improve the status bar reports, and have them auto fade after a set time
-
-##### To add to issues
-
-When conducting more than one search, under some conditions information from the previous search is stored and not cleared,
-sometimes resulting in a lower earthqauke count than expected. If this occurs, restart the program and conduct the search again.
