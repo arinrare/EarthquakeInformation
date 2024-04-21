@@ -23,9 +23,6 @@ OS Support: Windows 64 Bit
 OSX: The program runs in OSX
 Linux: Not yet tested, theoretically should work
 
-Note: The resources directory is required for the program to work.
-Running on a 4K monitor: The program was made in 2016 and is not built to work on a 4K monitor. In the executable folder i have provided a shortcut for Windows that sets Compatibility for High DPI mode. You just need to change the file location of the jar file in the properties of the shortcut if you move the shortcut. You will need to run in compatibility mode most likely or the text amd map will be too small. This is intended to be fixed to scale properly at some point.
-
 21/04/2024 - Soon to come, compile intructions and a way to add your own API key to the application without having to recompile.
 
 Program is unfinished.
