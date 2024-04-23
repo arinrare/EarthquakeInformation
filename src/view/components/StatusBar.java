@@ -107,10 +107,10 @@ public class StatusBar extends JPanel  {
 			}
 		}
 		if (numElements > 1) {
-			errorList += " not valid. Default values used for these parameters.";
+			errorList += " not used. Default values used for these parameters.";
 		}
 		else if (numElements == 1) {
-			errorList += " not valid. Default values used for this parameter.";
+			errorList += " not used. Default values used for this parameter.";
 		}
 		if (numElements > 0) {
 			errorStatus.setText(errorList);

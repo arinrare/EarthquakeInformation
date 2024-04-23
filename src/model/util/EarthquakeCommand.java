@@ -159,6 +159,10 @@ public class EarthquakeCommand {
 	public void setAPIKey(String newKey) {
 		this.apiKey = newKey;
 	}
+
+	public void setAPIKeyGSM(String newKey) {
+		this.apiKeyGSM = newKey;
+	}
 	
 	public void setNorthBoundary(double newNorthBoundary) {
 		northBoundary = newNorthBoundary;

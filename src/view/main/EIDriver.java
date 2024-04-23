@@ -20,7 +20,9 @@ public class EIDriver {
 	public static void main(String[] args) {
 		
 		model = new EIFacade();
+		
 		System.out.println("Welcome to the Earthquake Insight Application");
+		
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				/* Changes for Mac OSX */
@@ -29,6 +31,27 @@ public class EIDriver {
 				// props.put("prism.order", "sw");
 				// EIDriver eiInstance = new EIDriver();
 				new EIDriver();
+				
+				String apiKey = "#################";
+
+				if (args.length > 1) {
+					System.out.println("This proegram only takes one argument, a Google Maps API Key, in the form of apikey=YOUR_API_KEY");
+					return;
+				}
+				if (args.length == 0) {
+					System.out.println("This program requires a Google Maps API Key to run. Please provide one in the format apikey=YOUR_API_KEY");
+					return;
+				}
+				for (String arg : args) {
+					if (arg.contains("apikey=")) {	
+						apiKey = arg.substring(7);
+					} else {
+						System.out.println("This program only takes one argument, a Google Maps API Key, in the form of apikey=YOUR_API_KEY");
+						return;
+					}
+				}
+				
+				model.setAPIKeyGSM(apiKey);
 			}
 		});
 	}

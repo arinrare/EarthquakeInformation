@@ -114,6 +114,10 @@ public class EIFacade implements EIModel {
 	public void setAPIKeyEQ(String newKey) {
 		ec.setAPIKey(newKey);
 	}
+
+	public void setAPIKeyGSM(String newKey) {
+		ec.setAPIKeyGSM(newKey);
+	}
 	
 	public void setNorthBoundaryEQ(double newNorthBoundary) {
 		ec.setNorthBoundary(newNorthBoundary);

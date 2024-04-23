@@ -36,7 +36,7 @@ public class CitiesFunction {
 				URL URLTest = new URL(String.format("http://api.geonames.org/earthquakesJSON?username=%s&north=0.1&south=0.1&east=0.1&west=0.1", "michaelbaggottrmit"));
 				HttpURLConnection requestTest = (HttpURLConnection) URLTest.openConnection();
 				requestTest.connect();
-				if (requestTest.getResponseMessage().equals("OK")) {
+				if (requestTest.getResponseMessage().equals("200")) {
 					cc.setConnectionStatus("Online");
 					return;
 				}

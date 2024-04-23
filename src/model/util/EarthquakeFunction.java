@@ -42,7 +42,7 @@ public class EarthquakeFunction {
 			URL URLTest = new URL(String.format("http://api.geonames.org/earthquakesJSON?username=%s&north=0.1&south=0.1&east=0.1&west=0.1", ec.getAPIKey()));
 			HttpURLConnection requestTest = (HttpURLConnection) URLTest.openConnection();
 			requestTest.connect();
-			if (requestTest.getResponseMessage().equals("OK")) {
+			if (requestTest.getResponseMessage().equals("200")) {
 				ec.setConnectionStatus("Online");
 				return;
 			}
@@ -94,8 +94,9 @@ public class EarthquakeFunction {
 		try {
 			
 			mapURL = new URL(String.format("https://maps.googleapis.com/maps/api/staticmap?key=%s&size=%s&scale=%s&zoom=%s&center=%s&color=%s&path=%s&%s", ec.getAPIKeyGSM(), ec.getMapSize(), ec.getMapScale(), ec.getMapZoom(), ec.getMapCenter(), ec.getMapPathColor(), ec.getMapPath(), ec.getMapMarkers())); 
-			System.out.println("Map: " + mapURL);
-			System.out.println(mapURL.toString().length());
+			// Note, enabling the following println will debug the map url, but it will also reveal the Google Maps API key in the console
+			/*System.out.println("Map: " + mapURL);
+			System.out.println(mapURL.toString().length());*/
 		}
 		catch (Exception e) {
 			System.out.println("Error building URL for Google Maps");
@@ -108,8 +109,9 @@ public void buildMapCityCenter() {
 		try {
 			
 			mapURL = new URL(String.format("https://maps.googleapis.com/maps/api/staticmap?key=%s&size=%s&scale=%s&zoom=%s&center=%s&color=%s&path=%s&markers=%s&%s", ec.getAPIKeyGSM(), ec.getMapSize(), ec.getMapScale(),ec.getMapZoom(), ec.getMapCenter(), ec.getMapPathColor(), ec.getMapPath(), ec.getMapCityCenter(),ec.getMapMarkers())); 
-			System.out.println("Map: " + mapURL);
-			System.out.println(mapURL.toString().length());
+			// Note, enabling the following println will debug the map url, but it will also reveal the Google Maps API key in the console
+			/*System.out.println("Map: " + mapURL);
+			System.out.println(mapURL.toString().length());*/
 		}
 		catch (Exception e) {
 			System.out.println("Error building URL for Google Maps");

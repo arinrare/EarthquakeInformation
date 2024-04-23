@@ -25,6 +25,7 @@ public interface EIModel {
 	public String getMapZoom();
 	
 	public void setAPIKeyEQ(String newKey);
+	public void setAPIKeyGSM(String newKey);
 	public void setNorthBoundaryEQ(double newNorthBoundary);
 	public void setSouthBoundaryEQ(double newSouthBoundary);
 	public void setEastBoundaryEQ(double newEastBoundary);
