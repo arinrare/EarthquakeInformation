@@ -4,6 +4,8 @@ import model.facade.*;
 
 import view.components.*;
 
+import java.util.Properties;
+
 import javax.swing.SwingUtilities;
 
 public class EIDriver {
@@ -27,9 +29,10 @@ public class EIDriver {
 			public void run() {
 				/* Changes for Mac OSX */
 				/* Also need to add the OSX jfxrt.jar */
-				// Properties props = System.getProperties();
-				// props.put("prism.order", "sw");
-				// EIDriver eiInstance = new EIDriver();
+				Properties props = System.getProperties();
+				props.put("prism.order", "sw");
+				
+				/* Isntantiate the driver */
 				new EIDriver();
 				
 				String apiKey = "#################";
