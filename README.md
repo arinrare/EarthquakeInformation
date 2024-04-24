@@ -26,7 +26,7 @@ java -jar --module-path javafx-sdk-22.0.1/lib --add-modules javafx.web,javafx.me
 ## OS Support
 
 OS Support: Windows 64 Bit
-OSX: The program runs in OSX
+OSX: The program should run in OSX (Untested)
 Linux: Not yet tested, theoretically should work
 
 
