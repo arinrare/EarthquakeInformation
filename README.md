@@ -20,7 +20,7 @@ Then use your editor/compiler to export a runnable JAR file from the project
 
 The app needs the "resources" folder in the root directory to ouput the API json response, so make sure this is there when you run the JAR
 
-To run navigate to root project folder and run (exchange jar/EarthquakeInformation.jar for the location of your jar file):
+To run navigate to root project folder and run:
 java -jar --module-path javafx-sdk-22.0.1/lib --add-modules javafx.web,javafx.media,javafx.swing --enable-preview EarthquakeInformation.jar "apikey=YOUR_API_KEY"
 
 ## OS Support
